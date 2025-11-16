@@ -5,7 +5,7 @@ export const siteMeta = {
   tagline: "A creative technologist who helps teams cut through ambiguity and move the work forward.",
   email: "scott@scullum.com",
   social: {
-    linkedin: "https://www.linkedin.com/in/scottcullum",
+    linkedin: "https://www.linkedin.com/in/scullum/",
   },
 };
 

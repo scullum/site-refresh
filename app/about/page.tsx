@@ -22,14 +22,9 @@ export default function AboutPage() {
                 {aboutPage.hero.title}
               </h1>
 
-              {/* Photo placeholder - replace with actual image */}
+              {/* Photo */}
               <div className="sticky top-32">
                 <div className="aspect-square w-full bg-neutral-100 mb-6 relative overflow-hidden">
-                  {/* Placeholder - replace src with your photo */}
-                  <div className="absolute inset-0 flex items-center justify-center text-neutral-400 text-sm">
-                    Photo
-                  </div>
-                  {/* Uncomment when you have a photo:
                   <Image
                     src="/images/scott-cullum.jpg"
                     alt="Scott Cullum"
@@ -37,7 +32,6 @@ export default function AboutPage() {
                     className="object-cover"
                     priority
                   />
-                  */}
                 </div>
                 <p className="text-sm text-neutral-500 leading-relaxed">
                   Based near Washington, DC
