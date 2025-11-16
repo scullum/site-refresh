@@ -1,0 +1,42 @@
+import { workPage } from '@/data/content';
+import Link from 'next/link';
+
+export function Work() {
+  return (
+    <section id="work" className="min-h-screen px-8 py-32">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-24">
+          <h2 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-6">
+            {workPage.hero.title}
+          </h2>
+          <div className="space-y-6 text-lg text-neutral-600 leading-relaxed max-w-3xl">
+            {workPage.hero.intro.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-1">
+          {workPage.projects.map((project) => (
+            <Link
+              key={project.slug}
+              href={`/work/${project.slug}`}
+              className="group border border-neutral-200 p-12 hover:border-neutral-900 transition-all bg-white overflow-hidden block"
+            >
+              <h3 className="text-2xl font-medium tracking-tight mb-3 group-hover:text-orange-600 transition-colors">
+                {project.name}
+              </h3>
+              <p className="text-neutral-600 leading-relaxed">
+                {project.tagline}
+              </p>
+              <span className="inline-block mt-6 text-orange-600 group-hover:translate-x-1 transition-transform">
+                Read case study →
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
