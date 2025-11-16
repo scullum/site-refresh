@@ -21,9 +21,11 @@ export const nav = [
 export const homePage = {
   hero: {
     title: "Scott Cullum",
-    subtitle: "A creative technologist who helps teams cut through ambiguity and move the work forward.",
+    subtitle: "I am a creative technologist who helps teams cut through ambiguity and move the work forward.",
     body: [
-      "I help teams make better decisions and turn early ideas into working products. I use AI-native tools to explore options faster and reduce wasted cycles, giving teams clearer direction earlier in the process.",
+      "I help teams make better decisions and turn early ideas into working products. My work sits across design, engineering, and product, so I can bridge conversations that often slow progress.",
+      "I use AI-native tools to explore options faster and reduce wasted cycles, giving teams clearer direction earlier in the process.",
+      "Most clients bring me in for senior direction and hands-on support. When a project needs more depth, I work with a small network of designers, engineers, and specialists I trust.",
     ],
     cta: {
       label: "See the work",
@@ -248,6 +250,129 @@ export const workPage = {
       ],
     },
   ],
+};
+
+// ---------- TIMELINE ----------
+
+export const timelinePage = {
+  hero: {
+    title: "Experience",
+    subtitle: "More than two decades building, leading, and shaping the space between design, engineering, and strategy.",
+  },
+  timeline: [
+    {
+      period: "2023–Present",
+      company: "World Wide Technology",
+      role: "Director of Creative Technology",
+      location: "St Louis, Missouri · Remote",
+      description: [
+        "I lead a small, sharp team focused on making emerging technology—especially AI—practical inside a $20B enterprise. We prototype fast, frame clearly, and challenge slow-moving models. The work lives between strategy and execution: building tools, shaping narratives, and influencing how the business moves.",
+        "I introduced new offerings like Project AIR (an AI accelerator) and Ignition Zero (a framework for AI-assisted product delivery). Both shift the way WWT sells and delivers work—less bespoke, more repeatable, and better aligned with client urgency.",
+      ],
+      highlights: [
+        "Applied AI (LLMs, coding agents, architecture patterns)",
+        "Prototyping as a strategy tool",
+        "Technical framing for enterprise sales",
+        "Designing and leading cross-functional teams",
+        "Making complex systems legible and actionable",
+      ],
+    },
+    {
+      period: "2021–2023",
+      company: "Red Antler",
+      role: "Head of Technology",
+      location: "Brooklyn, New York · Remote",
+      description: [
+        "Brought a creative technologist's lens to a brand-first agency. My role was part builder, part translator—helping early-stage companies make smart technical bets while expanding the agency's POV on what technology could do.",
+        "I led engineering efforts across a portfolio of DTC and SaaS brands, from fast-turn marketing sites to scalable platform builds. I also introduced standards, tooling, and delivery patterns to support growth without sacrificing craft.",
+        "When resources were limited, I pushed for smarter use of no-code and modular systems. When expectations were unclear, I built prototypes that helped teams align. And when clients didn't know what they needed yet—I helped them figure it out.",
+      ],
+      highlights: [
+        "Technical strategy for brand and product work",
+        "Engineering leadership in lean environments",
+        "Modular systems and JAMstack architecture",
+        "No-code/low-code enablement",
+        "Prototypes to sell, scope, and steer",
+      ],
+      clients: ["Figure", "Shopify Ventures", "Expressable"],
+    },
+    {
+      period: "2009–2021",
+      company: "AKQA",
+      role: "Developer to Director of Creative Technology",
+      location: "San Francisco, CA and Washington, DC · On-site",
+      description: [
+        "Twelve years of building, leading, and evolving what creative technology meant inside one of the industry's most awarded agencies. I started as a front-end developer and eventually led emerging tech efforts across multiple offices—prototyping new interactions, onboarding major accounts, and mentoring teams through both polish and chaos.",
+        "My work ranged from early mobile web to Alexa skills, from pitch sprints to production launches. I helped shape the relationship between technology and creativity—ensuring our ideas worked as well as they looked.",
+      ],
+      highlights: [
+        "Led the tech track for Verizon's Express retail pilot, from hardware to commerce integration",
+        "Built an award-winning iPad app for WWF, honored with an Apple Design Award",
+        "Created a dungeon-quest Alexa skill for Bethesda's E3 showcase",
+        "Supported Audi of America through a major platform transition as they named AKQA AOR",
+      ],
+      focus: [
+        "Creative development and front-end architecture",
+        "Prototyping across platforms (mobile, voice, retail)",
+        "Technical leadership across global teams",
+        "Scoping and delivery for brand-centric innovation work",
+        "Building client trust through craft and clarity",
+      ],
+    },
+    {
+      period: "2006–2009",
+      company: "Under Armour",
+      role: "Manager - Interactive Technology",
+      location: "Baltimore, Maryland · On-site",
+      description: [
+        "Joined as e-commerce became a core growth engine. I led development for campaign sites and boutique commerce tools, supporting key brand moments like the launch of Under Armour's footwear category and the relaunch of its women's line.",
+        "I worked across marketing, product, and engineering to scale UnderArmour.com through three major iterations—helping grow DTC revenue from $4M to over $100M. Along the way, I helped shape how the brand delivered digital content at speed without compromising quality.",
+      ],
+      highlights: [
+        "Front-end development for campaign and commerce experiences",
+        "Cross-functional delivery with brand, marketing, and product teams",
+        "Scalable architecture for high-traffic retail",
+        "Fast-turn production for new product launches",
+        "Elevating technical craft inside a brand-led organization",
+      ],
+    },
+    {
+      period: "2004–2006",
+      company: "Congruent Media",
+      role: "Lead Designer",
+      location: "Baltimore, Maryland · On-site",
+      description: [],
+      highlights: [],
+    },
+    {
+      period: "2003–2004",
+      company: "North Charles Street Design Organization",
+      role: "Web Developer",
+      location: "Baltimore, Maryland · On-site",
+      description: ["Contract position focused on web development."],
+      highlights: [],
+    },
+    {
+      period: "1999–2002",
+      company: "Radicus Internet",
+      role: "Web Designer",
+      location: "Baltimore, Maryland Area",
+      description: [],
+      highlights: [],
+    },
+    {
+      period: "1998–2004",
+      company: "Headcold Laboratories",
+      role: "Partner",
+      location: "Baltimore, Maryland Area",
+      description: ["Freelance partnership focused on early web design and development."],
+      highlights: [],
+    },
+  ],
+  education: {
+    school: "University of Maryland Baltimore County",
+    period: "1997–2001",
+  },
 };
 
 // ---------- FOOTER ----------

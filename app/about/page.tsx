@@ -1,6 +1,8 @@
 import { aboutPage } from '@/data/content';
 import { Navigation } from '@/app/components/Navigation';
 import { Footer } from '@/app/components/Footer';
+import { ExperienceTimeline } from '@/app/components/ExperienceTimeline';
+import { PageTransition } from '@/app/components/PageTransition';
 import Image from 'next/image';
 
 export const metadata = {
@@ -12,6 +14,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white text-neutral-900">
       <Navigation />
+      <PageTransition>
 
       <main className="pt-32 pb-24 px-8">
         <div className="max-w-7xl mx-auto">
@@ -59,21 +62,30 @@ export default function AboutPage() {
                 </div>
               ))}
 
-              {/* CTA to Services */}
-              <div className="pt-12 mt-16 border-t border-neutral-200">
-                <a
-                  href="/services"
-                  className="inline-block text-sm uppercase tracking-wide font-medium border-b border-neutral-400 hover:border-neutral-900 transition-colors pb-1"
-                >
-                  View services
-                </a>
-              </div>
             </div>
+          </div>
+        </div>
+
+        {/* Experience Timeline */}
+        <div className="mt-32">
+          <ExperienceTimeline />
+        </div>
+
+        {/* CTA to Services */}
+        <div className="max-w-7xl mx-auto px-8 pt-16 pb-24">
+          <div className="border-t border-neutral-200 pt-12">
+            <a
+              href="/services"
+              className="inline-block text-sm uppercase tracking-wide font-medium border-b border-neutral-400 hover:border-neutral-900 transition-colors pb-1"
+            >
+              View services
+            </a>
           </div>
         </div>
       </main>
 
       <Footer />
+      </PageTransition>
     </div>
   );
 }
