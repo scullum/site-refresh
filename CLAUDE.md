@@ -46,9 +46,10 @@ The application uses Next.js App Router with a single-page layout pattern:
 - **app/page.tsx**: Main page component that composes all sections
 - **app/globals.css**: Global styles including Tailwind directives and custom CSS
 - **app/components/**: Individual section components
+- **app/work/[slug]/page.tsx**: Dynamic routes for individual project case studies
 - **app/robots.ts**: Dynamic robots.txt generation
 - **app/sitemap.ts**: Dynamic sitemap.xml generation
-- **data/**: Content data and TypeScript interfaces
+- **data/content.ts**: Centralized content management (single source of truth)
 
 ### Component Architecture
 
@@ -57,8 +58,8 @@ The site follows a section-based component architecture where each major section
 - **Navigation.tsx**: Top navigation bar with mobile menu (client component)
 - **Home.tsx**: Hero section with main messaging
 - **About.tsx**: About/background section
-- **Services.tsx**: Services offered section (imports data from data/services.ts)
-- **Work.tsx**: Portfolio/work examples section (imports data from data/projects.ts)
+- **Services.tsx**: Services offered section (imports from data/content.ts)
+- **Work.tsx**: Portfolio/work preview cards with links to detail pages (imports from data/content.ts)
 - **Footer.tsx**: Footer with contact information
 
 All components are composed together in `app/page.tsx` in a single-page layout. Each component is a named export (not default export).
@@ -67,13 +68,18 @@ All components are composed together in `app/page.tsx` in a single-page layout. 
 
 ### Data Management
 
-Content data (services, projects) is stored separately from components:
+All site content is centralized in a single file for easy updates:
 
-- **data/types.ts**: TypeScript interfaces for Service and Project
-- **data/services.ts**: Services content array
-- **data/projects.ts**: Projects/work content array
+- **data/content.ts**: Single source of truth containing:
+  - `siteMeta`: Site-wide metadata (name, email, social links)
+  - `nav`: Navigation links
+  - `homePage`: Hero content and "How I help" items
+  - `aboutPage`: Narrative sections about background and approach
+  - `servicesPage`: Detailed service offerings with structured content
+  - `workPage`: Project previews and full case study content
+  - `footer`: Footer content
 
-This separation allows for easier content updates without modifying component code.
+This centralized approach allows content updates without touching component code. Components import only what they need from this file.
 
 ### Styling Approach
 
@@ -102,6 +108,25 @@ Both development and production servers are explicitly configured to run on port
 - Dynamic robots.txt via app/robots.ts
 - Dynamic sitemap.xml via app/sitemap.ts
 - metadataBase set to https://scullum.com
+
+## Routing Structure
+
+- **/** - Main single-page scroll experience (Home → About → Services → Work → Contact)
+- **/work/[slug]** - Individual project case study pages:
+  - `/work/ignition-zero-project-air`
+  - `/work/wwf-together`
+  - `/work/verizon-express-store`
+  - `/work/audiusa`
+
+Navigation uses anchor links (`#home`, `#about`, etc.) for smooth scrolling on the main page.
+
+## Content Updates
+
+To update site content, edit `data/content.ts`. No component changes needed for:
+- Changing copy/messaging
+- Adding/removing services
+- Adding/removing projects
+- Updating contact information
 
 ## Environment Variables
 
