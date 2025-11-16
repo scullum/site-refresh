@@ -1,6 +1,7 @@
 import { servicesPage } from '@/data/content';
 import { Navigation } from '@/app/components/Navigation';
 import { Footer } from '@/app/components/Footer';
+import { PageTransition } from '@/app/components/PageTransition';
 
 export const metadata = {
   title: 'Services - Scott Cullum',
@@ -11,7 +12,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white text-neutral-900">
       <Navigation />
-
+      <PageTransition>
       <main className="pt-32 pb-24 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="mb-24">
@@ -95,6 +96,7 @@ export default function ServicesPage() {
       </main>
 
       <Footer />
+      </PageTransition>
     </div>
   );
 }
