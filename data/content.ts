@@ -23,9 +23,7 @@ export const homePage = {
     title: "Scott Cullum",
     subtitle: "A creative technologist who helps teams cut through ambiguity and move the work forward.",
     body: [
-      "I help teams make better decisions and turn early ideas into working products. My work sits across design, engineering, and product, so I can bridge conversations that often slow progress.",
-      "I use AI-native tools to explore options faster and reduce wasted cycles, giving teams clearer direction earlier in the process.",
-      "Most clients bring me in for senior direction and hands-on support. When a project needs more depth, I work with a small network of designers, engineers, and specialists I trust.",
+      "I help teams make better decisions and turn early ideas into working products. I use AI-native tools to explore options faster and reduce wasted cycles, giving teams clearer direction earlier in the process.",
     ],
     cta: {
       label: "See the work",

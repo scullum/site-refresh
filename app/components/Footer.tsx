@@ -6,7 +6,7 @@ export function Footer() {
     <footer id="contact" className="px-8 py-32 bg-neutral-50 border-t border-neutral-200">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <h2 className="text-5xl md:text-6xl font-medium tracking-tight mb-12">
+          <h2 className="text-5xl md:text-6xl font-semibold tracking-tight mb-12">
             {footer.heading}
           </h2>
           <div className="space-y-4">
@@ -30,7 +30,7 @@ export function Footer() {
         </div>
 
         <div className="pt-16 border-t border-neutral-200">
-          <p className="text-neutral-500 text-sm tracking-wide">
+          <p className="text-neutral-500 text-sm tracking-wide leading-relaxed">
             {footer.tagline}
           </p>
           <p className="text-neutral-400 text-xs mt-8">

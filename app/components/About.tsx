@@ -6,7 +6,7 @@ export function About() {
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid md:grid-cols-12 gap-16">
           <div className="md:col-span-3">
-            <h2 className="text-sm uppercase tracking-[0.2em] text-neutral-500 sticky top-32">
+            <h2 className="text-sm uppercase tracking-[0.2em] text-neutral-500 sticky top-32 font-semibold">
               {aboutPage.hero.title}
             </h2>
           </div>
@@ -15,11 +15,11 @@ export function About() {
               <div key={sectionIndex}>
                 {section.heading && (
                   <>
-                    <h3 className="text-2xl font-medium tracking-tight mb-6">{section.heading}</h3>
+                    <h3 className="text-2xl font-semibold tracking-tight mb-6">{section.heading}</h3>
                     <div className="h-px bg-neutral-200 mb-8"></div>
                   </>
                 )}
-                <div className="space-y-6 text-lg text-neutral-600 leading-relaxed">
+                <div className="space-y-6 text-lg text-neutral-700 leading-relaxed max-w-prose">
                   {section.body.map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
                   ))}

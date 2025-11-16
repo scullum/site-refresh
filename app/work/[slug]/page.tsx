@@ -54,10 +54,10 @@ export default function ProjectPage({ params }: PageProps) {
 
           {/* Project header */}
           <div className="mb-16">
-            <h1 className="text-5xl md:text-6xl font-medium leading-tight tracking-tight mb-6">
+            <h1 className="text-5xl md:text-6xl font-semibold leading-tight tracking-tight mb-6">
               {project.name}
             </h1>
-            <p className="text-2xl text-neutral-600 leading-relaxed">
+            <p className="text-2xl text-neutral-700 leading-relaxed max-w-prose">
               {project.tagline}
             </p>
           </div>
@@ -67,16 +67,16 @@ export default function ProjectPage({ params }: PageProps) {
             {project.sections.map((section, index) => (
               <div key={index}>
                 {section.heading && (
-                  <h2 className="text-3xl font-medium tracking-tight mb-4">
+                  <h2 className="text-3xl font-semibold tracking-tight mb-4">
                     {section.heading}
                   </h2>
                 )}
                 {section.subheading && (
-                  <p className="text-xl text-neutral-600 mb-6 italic">
+                  <p className="text-xl text-neutral-700 mb-6 italic leading-relaxed">
                     {section.subheading}
                   </p>
                 )}
-                <div className="space-y-6 text-lg text-neutral-600 leading-relaxed">
+                <div className="space-y-6 text-lg text-neutral-700 leading-relaxed max-w-prose">
                   {section.body.map((paragraph, pIndex) => (
                     <p key={pIndex}>{paragraph}</p>
                   ))}
@@ -92,9 +92,9 @@ export default function ProjectPage({ params }: PageProps) {
           <div className="mt-24 pt-12 border-t border-neutral-200">
             <Link
               href="/#work"
-              className="inline-flex items-center text-lg font-medium text-orange-600 hover:text-orange-700 transition-colors"
+              className="inline-block text-sm uppercase tracking-wide font-medium border-b border-neutral-400 hover:border-neutral-900 transition-colors pb-1"
             >
-              View all work →
+              View all work
             </Link>
           </div>
         </div>
