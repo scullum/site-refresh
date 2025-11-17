@@ -101,7 +101,7 @@ export default function ProjectPage({ params }: PageProps) {
                     {section.heading}
                   </h2>
                 )}
-                {section.subheading && (
+                {'subheading' in section && section.subheading && (
                   <p className="text-xl text-neutral-700 mb-6 italic leading-relaxed">
                     {section.subheading}
                   </p>
