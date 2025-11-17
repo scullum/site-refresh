@@ -174,6 +174,7 @@ export const workPage = {
       name: "Ignition Zero & Project AIR",
       tagline:
         "Two AI-native programs serving different needs: one accelerates exploration, the other delivers custom AI solutions.",
+      image: "/images/work/ignition/ignition-zero-project-air.avif",
       sections: [
         {
           heading: "",
@@ -206,6 +207,7 @@ export const workPage = {
       name: "WWF Together",
       tagline:
         "An Apple Design Award–winning iPad experience that turned conservation facts into tactile, personal moments.",
+      image: "/images/work/wwf/wwf-together.webp",
       sections: [
         {
           heading: "",
@@ -222,6 +224,7 @@ export const workPage = {
       name: "Verizon Express Store",
       tagline:
         "A prototype-driven retail concept that tested self-service models in smaller, faster Verizon stores.",
+      image: "/images/work/verizon/verizon-express-store.webp",
       sections: [
         {
           heading: "",
@@ -238,6 +241,7 @@ export const workPage = {
       name: "AudiUSA.com",
       tagline:
         "A full platform redesign that modernized Audi's U.S. digital presence and improved model-year delivery.",
+      image: "/images/work/audi/audiusa.webp",
       sections: [
         {
           heading: "",

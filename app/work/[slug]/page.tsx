@@ -1,6 +1,7 @@
 import { workPage } from '@/data/content';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Navigation } from '@/app/components/Navigation';
 import { Footer } from '@/app/components/Footer';
 
@@ -61,6 +62,19 @@ export default function ProjectPage({ params }: PageProps) {
               {project.tagline}
             </p>
           </div>
+
+          {/* Hero image */}
+          {project.image && (
+            <div className="aspect-[16/9] relative bg-neutral-100 mb-16 -mx-8 md:mx-0">
+              <Image
+                src={project.image}
+                alt={project.name}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
 
           {/* Project sections */}
           <div className="space-y-16">
