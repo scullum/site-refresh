@@ -7,6 +7,31 @@ import Image from 'next/image';
 export const metadata = {
   title: 'About - Scott Cullum',
   description: 'Learn about Scott Cullum, a creative technologist with 20+ years of experience bridging design, engineering, and strategy.',
+  alternates: {
+    canonical: 'https://scullum.com/about',
+  },
+  openGraph: {
+    title: 'About - Scott Cullum',
+    description: 'Learn about Scott Cullum, a creative technologist with 20+ years of experience bridging design, engineering, and strategy.',
+    url: 'https://scullum.com/about',
+    siteName: 'Scott Cullum',
+    locale: 'en_US',
+    type: 'profile',
+    images: [
+      {
+        url: '/images/scott-cullum.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Scott Cullum',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About - Scott Cullum',
+    description: 'Learn about Scott Cullum, a creative technologist with 20+ years of experience bridging design, engineering, and strategy.',
+    images: ['/images/scott-cullum.jpg'],
+  },
 };
 
 export default function AboutPage() {
@@ -29,6 +54,7 @@ export default function AboutPage() {
                     src="/images/scott-cullum.jpg"
                     alt="Scott Cullum"
                     fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
                     className="object-cover"
                     priority
                   />
