@@ -96,7 +96,7 @@ export default function ProjectPage({ params }: PageProps) {
         <div className="max-w-4xl mx-auto">
           {/* Back link */}
           <Link
-            href="/#work"
+            href="/work"
             className="inline-flex items-center text-neutral-600 hover:text-orange-600 transition-colors mb-12"
           >
             ← Back to work
@@ -171,7 +171,7 @@ export default function ProjectPage({ params }: PageProps) {
           {/* Navigation to next project */}
           <div className="mt-24 pt-12 border-t border-neutral-200">
             <Link
-              href="/#work"
+              href="/work"
               className="inline-block text-sm uppercase tracking-wide font-medium border-b border-neutral-400 hover:border-neutral-900 transition-colors pb-1"
             >
               View all work

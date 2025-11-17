@@ -13,7 +13,7 @@ export const nav = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Work", href: "/#work" },
+  { label: "Work", href: "/work" },
 ];
 
 // ---------- HOME ----------
@@ -29,7 +29,7 @@ export const homePage = {
     ],
     cta: {
       label: "See the work",
-      href: "#work",
+      href: "/work",
     },
   },
   howIHelp: {

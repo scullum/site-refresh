@@ -30,7 +30,7 @@ export default function NotFound() {
               Go to homepage
             </Link>
             <Link
-              href="/#work"
+              href="/work"
               className="inline-block px-8 py-4 border-2 border-neutral-900 text-neutral-900 font-medium hover:bg-neutral-900 hover:text-white transition-colors"
             >
               View work

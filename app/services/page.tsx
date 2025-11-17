@@ -109,7 +109,7 @@ export default function ServicesPage() {
           {/* CTA to Work */}
           <div className="pt-16 mt-16 border-t border-neutral-200">
             <a
-              href="/#work"
+              href="/work"
               className="inline-block text-sm uppercase tracking-wide font-medium border-b border-neutral-400 hover:border-neutral-900 transition-colors pb-1"
             >
               View work
