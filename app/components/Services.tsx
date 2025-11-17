@@ -5,7 +5,7 @@ export function Services() {
     <section id="services" className="min-h-screen px-8 py-32 bg-neutral-50">
       <div className="max-w-7xl mx-auto">
         <div className="mb-24">
-          <h2 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-6 font-semibold">
+          <h2 className="text-sm uppercase tracking-[0.2em] text-orange-600 mb-6 font-semibold">
             {servicesPage.hero.title}
           </h2>
           <div className="space-y-6 text-lg text-neutral-700 leading-relaxed max-w-prose">
@@ -34,7 +34,7 @@ export function Services() {
                 <div className="md:col-span-7 space-y-8">
                   {service.whatThisIncludes.length > 0 && (
                     <div>
-                      <h4 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-4 font-semibold">
+                      <h4 className="text-sm uppercase tracking-[0.2em] text-orange-600 mb-4 font-semibold">
                         What this includes
                       </h4>
                       <ul className="space-y-3 text-neutral-700 leading-relaxed">
@@ -49,7 +49,7 @@ export function Services() {
                   )}
                   {service.goodFor.length > 0 && (
                     <div>
-                      <h4 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-4 font-semibold">
+                      <h4 className="text-sm uppercase tracking-[0.2em] text-orange-600 mb-4 font-semibold">
                         Good for
                       </h4>
                       <ul className="space-y-3 text-neutral-700 leading-relaxed">

@@ -6,7 +6,7 @@ export function About() {
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid md:grid-cols-12 gap-16">
           <div className="md:col-span-3">
-            <h2 className="text-sm uppercase tracking-[0.2em] text-neutral-500 sticky top-32 font-semibold">
+            <h2 className="text-sm uppercase tracking-[0.2em] text-orange-600 sticky top-32 font-semibold">
               {aboutPage.hero.title}
             </h2>
           </div>

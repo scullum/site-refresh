@@ -6,7 +6,7 @@ export function Work() {
     <section id="work" className="min-h-screen px-8 py-32">
       <div className="max-w-7xl mx-auto">
         <div className="mb-24">
-          <h2 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-6 font-semibold">
+          <h2 className="text-sm uppercase tracking-[0.2em] text-orange-600 mb-6 font-semibold">
             {workPage.hero.title}
           </h2>
           <div className="space-y-6 text-lg text-neutral-700 leading-relaxed max-w-prose">

@@ -26,7 +26,7 @@ export function ExperienceTimeline() {
 
         {item.highlights && item.highlights.length > 0 && (
           <div className="mb-6">
-            <h4 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-4 font-semibold">
+            <h4 className="text-sm uppercase tracking-[0.2em] text-orange-600 mb-4 font-semibold">
               Highlights
             </h4>
             <ul className="space-y-2">
@@ -42,7 +42,7 @@ export function ExperienceTimeline() {
 
         {item.focus && item.focus.length > 0 && (
           <div className="mb-6">
-            <h4 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-4 font-semibold">
+            <h4 className="text-sm uppercase tracking-[0.2em] text-orange-600 mb-4 font-semibold">
               Core Focus Areas
             </h4>
             <ul className="space-y-2">
@@ -58,7 +58,7 @@ export function ExperienceTimeline() {
 
         {item.clients && item.clients.length > 0 && (
           <div>
-            <h4 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-3 font-semibold">
+            <h4 className="text-sm uppercase tracking-[0.2em] text-orange-600 mb-3 font-semibold">
               Select Clients
             </h4>
             <p className="text-neutral-700">{item.clients.join(" · ")}</p>
@@ -75,7 +75,7 @@ export function ExperienceTimeline() {
       {/* Education Section */}
       <div className="px-8 pb-24">
         <div className="max-w-7xl mx-auto border-t border-neutral-200 pt-16">
-          <h2 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-6 font-semibold">
+          <h2 className="text-sm uppercase tracking-[0.2em] text-orange-600 mb-6 font-semibold">
             Education
           </h2>
           <div>

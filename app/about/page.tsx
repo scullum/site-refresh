@@ -21,7 +21,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-12 gap-16">
             {/* Sidebar with label and photo */}
             <div className="md:col-span-3">
-              <h1 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-12 font-semibold">
+              <h1 className="text-sm uppercase tracking-[0.2em] text-orange-600 mb-12 font-semibold">
                 {aboutPage.hero.title}
               </h1>
 
@@ -37,7 +37,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <p className="text-sm text-neutral-500 leading-relaxed">
-                  Based near Washington, DC
+                  I used to look like this 10 years ago
                 </p>
               </div>
             </div>
