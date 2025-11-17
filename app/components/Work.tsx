@@ -1,5 +1,6 @@
 import { workPage } from '@/data/content';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Work() {
   return (
@@ -21,17 +22,32 @@ export function Work() {
             <Link
               key={project.slug}
               href={`/work/${project.slug}`}
-              className="group border border-neutral-200 p-12 hover:border-neutral-900 transition-all bg-white overflow-hidden block"
+              className="group border border-neutral-200 hover:border-neutral-900 transition-all bg-white overflow-hidden block"
             >
-              <h3 className="text-2xl font-semibold tracking-tight mb-3 group-hover:text-orange-600 transition-colors">
-                {project.name}
-              </h3>
-              <p className="text-neutral-700 leading-relaxed">
-                {project.tagline}
-              </p>
-              <span className="inline-block mt-6 text-sm uppercase tracking-wide font-medium border-b border-neutral-400 group-hover:border-neutral-900 transition-colors pb-1">
-                Read case study
-              </span>
+              {project.image && (
+                <div className="aspect-[16/10] relative bg-neutral-100 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              )}
+              <div className="p-12">
+                <p className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-3 font-semibold">
+                  {project.company}
+                </p>
+                <h3 className="text-2xl font-semibold tracking-tight mb-3 group-hover:text-orange-600 transition-colors">
+                  {project.name}
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  {project.tagline}
+                </p>
+                <span className="inline-block mt-6 text-sm uppercase tracking-wide font-medium border-b border-neutral-400 group-hover:border-neutral-900 transition-colors pb-1">
+                  Read case study
+                </span>
+              </div>
             </Link>
           ))}
         </div>
