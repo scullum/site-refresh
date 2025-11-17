@@ -271,6 +271,7 @@ export const timelinePage = {
     {
       period: "2023–Present",
       company: "World Wide Technology",
+      companyUrl: "https://www.wwt.com",
       role: "Director of Creative Technology",
       location: "St Louis, Missouri · Remote",
       description: [
@@ -288,6 +289,7 @@ export const timelinePage = {
     {
       period: "2021–2023",
       company: "Red Antler",
+      companyUrl: "https://www.redantler.com",
       role: "Head of Technology",
       location: "Brooklyn, New York · Remote",
       description: [
@@ -307,6 +309,7 @@ export const timelinePage = {
     {
       period: "2009–2021",
       company: "AKQA",
+      companyUrl: "https://www.akqa.com",
       role: "Developer to Director of Creative Technology",
       location: "San Francisco, CA and Washington, DC · On-site",
       description: [
@@ -330,6 +333,7 @@ export const timelinePage = {
     {
       period: "2006–2009",
       company: "Under Armour",
+      companyUrl: "https://www.underarmour.com",
       role: "Manager - Interactive Technology",
       location: "Baltimore, Maryland · On-site",
       description: [
@@ -355,6 +359,7 @@ export const timelinePage = {
     {
       period: "2003–2004",
       company: "North Charles Street Design Organization",
+      companyUrl: "https://www.ncsdo.com",
       role: "Web Developer",
       location: "Baltimore, Maryland · On-site",
       description: ["Contract position focused on web development."],

@@ -12,7 +12,18 @@ export function ExperienceTimeline() {
           <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-900 mb-2">
             {item.role}
           </h3>
-          <p className="text-lg text-neutral-700 mb-1">{item.company}</p>
+          {item.companyUrl ? (
+            <a
+              href={item.companyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg text-neutral-700 hover:text-orange-600 transition-colors mb-1 inline-block"
+            >
+              {item.company}
+            </a>
+          ) : (
+            <p className="text-lg text-neutral-700 mb-1">{item.company}</p>
+          )}
           <p className="text-sm text-neutral-500">{item.location}</p>
         </div>
 
