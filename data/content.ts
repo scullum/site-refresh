@@ -247,6 +247,7 @@ export const workPage = {
       tagline:
         "A full platform redesign that modernized Audi's U.S. digital presence and improved model-year delivery.",
       image: "/images/work/audi/audiusa.webp",
+      videoUrl: "https://player.vimeo.com/video/350079404?title=0&byline=0&portrait=0",
       sections: [
         {
           heading: "",
