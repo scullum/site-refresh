@@ -7,6 +7,11 @@ import { ReactNode } from 'react';
 export default function Template({ children }: { children: ReactNode }) {
   const pathname = usePathname();
 
+  // Skip page transition on homepage
+  if (pathname === '/') {
+    return <>{children}</>;
+  }
+
   return (
     <AnimatePresence mode="wait">
       <motion.div
