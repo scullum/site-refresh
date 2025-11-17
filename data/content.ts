@@ -229,6 +229,7 @@ export const workPage = {
       tagline:
         "A prototype-driven retail concept that tested self-service models in smaller, faster Verizon stores.",
       image: "/images/work/verizon/verizon-express-store.webp",
+      videoUrl: "https://player.vimeo.com/video/521468161?title=0&byline=0&portrait=0",
       sections: [
         {
           heading: "",
