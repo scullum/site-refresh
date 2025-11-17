@@ -2,7 +2,6 @@ import { aboutPage } from '@/data/content';
 import { Navigation } from '@/app/components/Navigation';
 import { Footer } from '@/app/components/Footer';
 import { ExperienceTimeline } from '@/app/components/ExperienceTimeline';
-import { PageTransition } from '@/app/components/PageTransition';
 import Image from 'next/image';
 
 export const metadata = {
@@ -14,8 +13,6 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white text-neutral-900">
       <Navigation />
-      <PageTransition>
-
       <main className="pt-32 pb-24 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-12 gap-16">
@@ -85,7 +82,6 @@ export default function AboutPage() {
       </main>
 
       <Footer />
-      </PageTransition>
     </div>
   );
 }

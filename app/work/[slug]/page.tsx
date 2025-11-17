@@ -42,7 +42,6 @@ export default function ProjectPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-white text-neutral-900">
       <Navigation />
-
       <main className="pt-32 pb-24 px-8">
         <div className="max-w-4xl mx-auto">
           {/* Back link */}
