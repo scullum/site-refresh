@@ -35,6 +35,9 @@ export function Work() {
                 </div>
               )}
               <div className="p-12">
+                <p className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-3 font-semibold">
+                  {project.company}
+                </p>
                 <h3 className="text-2xl font-semibold tracking-tight mb-3 group-hover:text-orange-600 transition-colors">
                   {project.name}
                 </h3>

@@ -172,6 +172,7 @@ export const workPage = {
     {
       slug: "ignition-zero-project-air",
       name: "Ignition Zero & Project AIR",
+      company: "World Wide Technology",
       tagline:
         "Two AI-native programs serving different needs: one accelerates exploration, the other delivers custom AI solutions.",
       image: "/images/work/ignition/ignition-zero-project-air.avif",
@@ -205,6 +206,7 @@ export const workPage = {
     {
       slug: "wwf-together",
       name: "WWF Together",
+      company: "AKQA",
       tagline:
         "An Apple Design Award–winning iPad experience that turned conservation facts into tactile, personal moments.",
       image: "/images/work/wwf/wwf-together.webp",
@@ -222,6 +224,7 @@ export const workPage = {
     {
       slug: "verizon-express-store",
       name: "Verizon Express Store",
+      company: "AKQA",
       tagline:
         "A prototype-driven retail concept that tested self-service models in smaller, faster Verizon stores.",
       image: "/images/work/verizon/verizon-express-store.webp",
@@ -239,6 +242,7 @@ export const workPage = {
     {
       slug: "audiusa",
       name: "AudiUSA.com",
+      company: "AKQA",
       tagline:
         "A full platform redesign that modernized Audi's U.S. digital presence and improved model-year delivery.",
       image: "/images/work/audi/audiusa.webp",
