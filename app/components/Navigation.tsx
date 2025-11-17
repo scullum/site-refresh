@@ -87,9 +87,9 @@ export function Navigation() {
             {nav.slice(1).map((link) => {
               let isActive = pathname === link.href;
 
-              // Special handling for hash links on homepage
+              // Special handling for work link (homepage section or detail pages)
               if (link.href === '/#work') {
-                isActive = isHomePage && activeSection === '#work';
+                isActive = (isHomePage && activeSection === '#work') || pathname.startsWith('/work/');
               }
 
               // Don't show page indicators when contact section is active
@@ -138,9 +138,9 @@ export function Navigation() {
               {nav.slice(1).map((link) => {
                 let isActive = pathname === link.href;
 
-                // Special handling for hash links on homepage
+                // Special handling for work link (homepage section or detail pages)
                 if (link.href === '/#work') {
-                  isActive = isHomePage && activeSection === '#work';
+                  isActive = (isHomePage && activeSection === '#work') || pathname.startsWith('/work/');
                 }
 
                 // Don't show page indicators when contact section is active

@@ -54,7 +54,7 @@ export default function ProjectPage({ params }: PageProps) {
 
           {/* Project header */}
           <div className="mb-16">
-            <h1 className="text-5xl md:text-6xl font-semibold leading-tight tracking-tight mb-6">
+            <h1 className="text-5xl md:text-6xl font-semibold leading-tight tracking-tight mb-6 text-orange-600">
               {project.name}
             </h1>
             <p className="text-2xl text-neutral-700 leading-relaxed max-w-prose">
