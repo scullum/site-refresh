@@ -66,8 +66,21 @@ export default function ProjectPage({ params }: PageProps) {
             </p>
           </div>
 
+          {/* Video player */}
+          {project.videoUrl && (
+            <div className="aspect-[16/9] relative bg-neutral-900 mb-16 -mx-8 md:mx-0">
+              <iframe
+                src={project.videoUrl}
+                title={`${project.name} video`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          )}
+
           {/* Hero image */}
-          {project.image && (
+          {project.image && !project.videoUrl && (
             <div className="aspect-[16/9] relative bg-neutral-100 mb-16 -mx-8 md:mx-0">
               <Image
                 src={project.image}
