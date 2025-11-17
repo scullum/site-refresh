@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: 'Scott Cullum - Creative Technologist & Product Consultant',
   description: 'Senior consultant working across design, engineering, and AI-native product acceleration.',
   metadataBase: new URL('https://scullum.com'),
+  alternates: {
+    canonical: 'https://scullum.com',
+  },
   openGraph: {
     title: 'Scott Cullum - Creative Technologist & Product Consultant',
     description: 'Senior consultant working across design, engineering, and AI-native product acceleration.',
@@ -21,11 +24,20 @@ export const metadata: Metadata = {
     siteName: 'Scott Cullum',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/images/scott-cullum.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Scott Cullum - Creative Technologist & Product Consultant',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Scott Cullum - Creative Technologist & Product Consultant',
     description: 'Senior consultant working across design, engineering, and AI-native product acceleration.',
+    images: ['/images/scott-cullum.jpg'],
   },
 };
 

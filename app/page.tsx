@@ -8,9 +8,11 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-white text-neutral-900">
       <Navigation />
-      <Home />
-      <HowIHelp />
-      <Work />
+      <main id="main-content">
+        <Home />
+        <HowIHelp />
+        <Work />
+      </main>
       <Footer />
     </div>
   );

@@ -26,9 +26,37 @@ export async function generateMetadata({ params }: PageProps) {
     };
   }
 
+  const url = `https://scullum.com/work/${project.slug}`;
+  const imageUrl = project.image || '/images/scott-cullum.jpg';
+
   return {
     title: `${project.name} - Scott Cullum`,
     description: project.tagline,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${project.name} - Scott Cullum`,
+      description: project.tagline,
+      url: url,
+      siteName: 'Scott Cullum',
+      locale: 'en_US',
+      type: 'article',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: project.name,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.name} - Scott Cullum`,
+      description: project.tagline,
+      images: [imageUrl],
+    },
   };
 }
 
@@ -39,8 +67,30 @@ export default function ProjectPage({ params }: PageProps) {
     notFound();
   }
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: project.name,
+    description: project.tagline,
+    author: {
+      '@type': 'Person',
+      name: 'Scott Cullum',
+      url: 'https://scullum.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: project.company,
+    },
+    url: `https://scullum.com/work/${project.slug}`,
+    image: project.image,
+  };
+
   return (
     <div className="min-h-screen bg-white text-neutral-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navigation />
       <main className="pt-32 pb-24 px-8">
         <div className="max-w-4xl mx-auto">
@@ -85,6 +135,7 @@ export default function ProjectPage({ params }: PageProps) {
                 src={project.image}
                 alt={project.name}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                 className="object-cover"
                 priority
               />
