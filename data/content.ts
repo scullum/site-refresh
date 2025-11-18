@@ -260,6 +260,45 @@ export const workPage = {
         },
       ],
     },
+    {
+      slug: "aarp-now",
+      name: "AARP Now",
+      company: "AKQA",
+      tagline:
+        "A mobile product vision that clarified purpose, sharpened member value, and set the direction for AARP's next-generation app.",
+      image: "/images/work/aarp/aarp-now.webp",
+      videoUrl: "https://www.youtube.com/embed/2KvnUApNEcs",
+      sections: [
+        {
+          heading: "",
+          body: [
+            "AARP knew their mobile experience was falling behind. Members struggled to navigate core features, and the value of membership wasn't coming through. They asked for a reimagined mobile product that could drive stronger engagement and communicate clearer purpose.",
+            "I joined the team to help refine the concept and build a vision that could rise above internal constraints. The initial pitch raised a wave of questions from AARP's leadership, signaling that the product needed stronger positioning and a clearer reason to exist. I worked closely with the team to reexamine user needs, sharpen the narrative around member value, and evolve the concept into something more focused and intentional.",
+            "We spent the following weeks in steady contact with client stakeholders, iterating on flow, feature priority, and the core proposition. The result was a product vision that gave the client renewed confidence and energy, providing a clear guide for the MVP now in production. It showed AARP a version of the app that matched the expectations of modern members and clarified why the mobile experience mattered.",
+          ],
+        },
+      ],
+    },
+    {
+      slug: "watchdogs-digital-shadow",
+      name: "Ubisoft Watch_Dogs: Digital Shadow",
+      company: "AKQA",
+      tagline:
+        "A data-driven social campaign that turned Facebook's open graph into a narrative about personal exposure.",
+      image: "/images/work/watchdogs/watchdogs-digital-shadow.webp",
+      videoUrl: "https://www.youtube.com/embed/Dvn5aegzcts",
+      sections: [
+        {
+          heading: "",
+          body: [
+            "Ubisoft wanted a campaign that could extend the themes of Watch_Dogs into the real world and reinforce the idea that personal data is more revealing than most people realize. The original brief called for multiple digital tent-pole moments connected to PAX, the trailer reveal, and other beats in the launch calendar.",
+            "I joined the concept team to develop ideas that supported those moments and tied directly to the game's surveillance narrative. Early sessions focused on mapping user journeys and exploring how to connect marketing goals with the underlying lore. As budgets tightened, the work narrowed to a single execution that became Digital Shadow.",
+            "This was during a window when Facebook's open graph still exposed meaningful connections and behavioral signals. We used this to build a narrative experience that felt like a personal audit. Instead of 'hacking' users, we reframed publicly available data into a story: who interacts with your posts, who you ignore, which relationships look unbalanced, and how those patterns could be exploited through simple social engineering. The impact came from showing people how exposed they already were.",
+            "My work centered on shaping the narrative structure, refining how we interpreted data, and building quick prototypes that helped the client understand the tone, flow, and boundaries of the experience. Digital Shadow became the lead social campaign for the Watch_Dogs launch and a clear expression of the game's core themes.",
+          ],
+        },
+      ],
+    },
   ],
 };
 

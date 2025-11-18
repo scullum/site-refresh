@@ -90,7 +90,7 @@ export default function AboutPage() {
         </div>
 
         {/* Experience Timeline */}
-        <div className="mt-32">
+        <div className="mt-16">
           <ExperienceTimeline />
         </div>
 

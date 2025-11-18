@@ -18,7 +18,7 @@ export function Work() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-1">
-          {workPage.projects.map((project) => (
+          {workPage.projects.slice(0, 4).map((project) => (
             <Link
               key={project.slug}
               href={`/work/${project.slug}`}
