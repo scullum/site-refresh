@@ -28,7 +28,7 @@ export const homePage = {
       "Most clients bring me in for senior direction and hands-on support. When a project needs more depth, I work with a small network of designers, engineers, and specialists I trust.",
     ],
     cta: {
-      label: "See the work",
+      label: "View work",
       href: "/work",
     },
   },
