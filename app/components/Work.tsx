@@ -53,13 +53,13 @@ export function Work() {
           ))}
         </div>
 
-        {/* View all work CTA */}
+        {/* View work CTA */}
         <div className="mt-16 text-center">
           <Link
             href="/work"
             className="inline-block text-sm uppercase tracking-wide font-medium border-b border-neutral-400 hover:border-neutral-900 transition-colors pb-1"
           >
-            View all work
+            View work
           </Link>
         </div>
       </div>

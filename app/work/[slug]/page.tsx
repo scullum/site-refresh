@@ -174,7 +174,7 @@ export default function ProjectPage({ params }: PageProps) {
               href="/work"
               className="inline-block text-sm uppercase tracking-wide font-medium border-b border-neutral-400 hover:border-neutral-900 transition-colors pb-1"
             >
-              View all work
+              View work
             </Link>
           </div>
         </div>
