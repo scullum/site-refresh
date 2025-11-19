@@ -10,7 +10,7 @@ This is a Next.js-based personal consultancy website (scullum.com) built with Ty
 
 - **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript (strict mode enabled)
-- **Styling**: Tailwind CSS with Inter font family (via next/font)
+- **Styling**: Tailwind CSS with Manrope font family (via next/font)
 - **UI Library**: React 18 with lucide-react for icons
 - **Package Manager**: npm (Node.js >= 18.17.0 required)
 
@@ -84,7 +84,7 @@ This centralized approach allows content updates without touching component code
 ### Styling Approach
 
 - Uses Tailwind CSS utility classes exclusively
-- Custom font: Inter (loaded via next/font for optimal performance)
+- Custom font: Manrope (loaded via next/font for optimal performance)
 - Responsive breakpoints: md, lg variants used throughout
 - Color palette: neutral grays with neutral-900 for primary text, orange-600 for accents
 - Smooth scroll behavior enabled globally
