@@ -204,6 +204,25 @@ export const workPage = {
       ],
     },
     {
+      slug: "real-time-ai-translation",
+      name: "Real-Time AI Translation for a Defense Agency",
+      company: "World Wide Technology",
+      tagline:
+        "A secure, real-time multilingual translation prototype that enabled mission-speed intelligence in air-gapped environments.",
+      image: "/images/work/defense/real-time-ai-translation.jpg",
+      externalUrl: "https://www.wwt.com/case-study/real-time-ai-translation-expands-tactical-intelligence-for-defense-agency",
+      sections: [
+        {
+          heading: "",
+          body: [
+            "A defense agency needed to translate large volumes of open-source intelligence from multiple languages into actionable reports. Manual processes were slow and risked losing critical time. Existing cloud solutions could not meet the security constraints, and most platforms lacked the regional dialect nuance required for trusted output.",
+            "I led the design of a prototype built within a secure AI proving ground, combining speech recognition, document translation, and automated information retrieval in an air-gapped environment. The team refined regional language models, optimized GPU inference, and demonstrated real-time translation—all in three weeks.",
+            "The result: a working prototype that reduced manual translation time from hours to minutes, preserved cultural nuance, and operated without internet connectivity, giving the agency a viable path to scale mission-ready intelligence workflows.",
+          ],
+        },
+      ],
+    },
+    {
       slug: "wwf-together",
       name: "WWF Together",
       company: "AKQA",

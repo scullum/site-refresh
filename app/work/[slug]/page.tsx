@@ -113,6 +113,18 @@ export default function ProjectPage({ params }: PageProps) {
             <p className="text-2xl text-neutral-700 leading-relaxed max-w-prose">
               {project.tagline}
             </p>
+            {'externalUrl' in project && project.externalUrl && (
+              <div className="mt-8">
+                <a
+                  href={project.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm uppercase tracking-wide font-medium border-b-2 border-orange-600 hover:border-orange-700 text-orange-600 hover:text-orange-700 transition-colors pb-1"
+                >
+                  Read full case study →
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Video player */}
