@@ -24,8 +24,8 @@ export const homePage = {
     subtitle: "I am a creative technologist who helps teams cut through ambiguity and move the work forward.",
     body: [
       "I help teams make better decisions and turn early ideas into working products. My work sits across design, engineering, and product, so I can bridge conversations that often slow progress.",
-      "I use AI-native tools to explore options faster and reduce wasted cycles, giving teams clearer direction earlier in the process.",
-      "Most clients bring me in for senior direction and hands-on support. When a project needs more depth, I work with a small network of designers, engineers, and specialists I trust.",
+      "I work in an AI-native way, which means faster exploration and fewer wasted cycles.",
+      "Most clients bring me in part-time for senior direction and hands-on support. When a project needs more depth, I work with a small network of trusted collaborators.",
     ],
     cta: {
       label: "View work",
@@ -436,5 +436,6 @@ export const footer = {
   heading: "Get in touch",
   email: "scott@scullum.com",
   linkedinLabel: "LinkedIn →",
+  availability: "Currently accepting select engagements for 2026.",
   tagline: "A creative technologist who helps teams cut through ambiguity and move the work forward.",
 };

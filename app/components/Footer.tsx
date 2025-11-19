@@ -27,6 +27,11 @@ export function Footer() {
               </a>
             </div>
           </div>
+          {footer.availability && (
+            <p className="text-neutral-600 text-base mt-8">
+              {footer.availability}
+            </p>
+          )}
         </div>
 
         <div className="pt-16 border-t border-neutral-200">
