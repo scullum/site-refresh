@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { homePage } from '@/data/content';
+import { motion } from 'framer-motion';
 
 export function Home() {
   const [hideHeroName, setHideHeroName] = useState(false);
@@ -19,26 +20,46 @@ export function Home() {
   }, [hideHeroName]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center bg-orange-600 text-white px-8 pt-24 pb-32">
+    <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-orange-600 via-orange-500 to-orange-700 text-white px-8 pt-24 pb-32 animate-gradient bg-[length:200%_200%]">
       <div className="max-w-7xl mx-auto w-full">
         <div className="max-w-5xl">
-          <div className={`py-8 mb-4 transition-opacity duration-300 ${hideHeroName ? 'opacity-0' : 'opacity-100'}`}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: hideHeroName ? 0 : 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="py-8 mb-4"
+          >
             <p className="text-2xl md:text-3xl font-semibold tracking-tight">
               {homePage.hero.title}
             </p>
-          </div>
+          </motion.div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[0.95] tracking-tight mb-12">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[0.95] tracking-tight mb-12"
+          >
             {homePage.hero.subtitle}
-          </h1>
+          </motion.h1>
 
-          <div className="space-y-6 text-xl md:text-2xl text-white/90 leading-relaxed max-w-prose mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="space-y-6 text-xl md:text-2xl text-white/90 leading-relaxed max-w-prose mb-8"
+          >
             {homePage.hero.body.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
-          </div>
+          </motion.div>
 
-          <div className="flex gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="flex gap-8"
+          >
             <a
               href={homePage.hero.cta.href}
               className="inline-block text-sm uppercase tracking-wide font-medium border-b-2 border-white hover:border-white/70 hover:text-white/70 transition-colors pb-1"
@@ -51,7 +72,7 @@ export function Home() {
             >
               More about me
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
