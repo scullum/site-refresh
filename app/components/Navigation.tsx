@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { nav, siteMeta } from '@/data/content';
 import { useTheme } from '@/lib/theme-context';
 import { themes } from '@/lib/themes';
+import { featureFlags } from '@/lib/feature-flags';
 
 export function Navigation() {
   const pathname = usePathname();
@@ -134,26 +135,30 @@ export function Navigation() {
               Contact
             </a>
 
-            {/* Theme Switcher */}
-            <button
-              onClick={handleThemeSwitch}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-theme bg-bg border border-border hover:border-border-strong transition-colors ml-4"
-              title="Change theme"
-            >
-              <Palette size={16} className="text-primary" />
-              <span className="text-xs font-medium">{currentTheme.name}</span>
-            </button>
+            {/* Theme Switcher - only shown when feature flag is enabled */}
+            {featureFlags.enableThemeSelector && (
+              <button
+                onClick={handleThemeSwitch}
+                className="flex items-center gap-2 px-3 py-1.5 rounded-theme bg-bg border border-border hover:border-border-strong transition-colors ml-4"
+                title="Change theme"
+              >
+                <Palette size={16} className="text-primary" />
+                <span className="text-xs font-medium">{currentTheme.name}</span>
+              </button>
+            )}
           </div>
 
           {/* Mobile: Theme button + Menu Button */}
           <div className="md:hidden flex items-center gap-2">
-            <button
-              onClick={handleThemeSwitch}
-              className="p-2 hover:text-primary transition-colors"
-              title="Change theme"
-            >
-              <Palette size={20} />
-            </button>
+            {featureFlags.enableThemeSelector && (
+              <button
+                onClick={handleThemeSwitch}
+                className="p-2 hover:text-primary transition-colors"
+                title="Change theme"
+              >
+                <Palette size={20} />
+              </button>
+            )}
             <button
               className="p-2 hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -206,18 +211,20 @@ export function Navigation() {
                 Contact
               </a>
 
-              {/* Mobile theme info */}
-              <div className="pt-4 mt-4 border-t border-border">
-                <p className="text-xs text-fg-muted mb-2">Current theme</p>
-                <button
-                  onClick={handleThemeSwitch}
-                  className="flex items-center gap-2 text-primary"
-                >
-                  <Palette size={16} />
-                  <span className="font-medium">{currentTheme.name}</span>
-                  <span className="text-xs text-fg-muted">({currentTheme.era})</span>
-                </button>
-              </div>
+              {/* Mobile theme info - only shown when feature flag is enabled */}
+              {featureFlags.enableThemeSelector && (
+                <div className="pt-4 mt-4 border-t border-border">
+                  <p className="text-xs text-fg-muted mb-2">Current theme</p>
+                  <button
+                    onClick={handleThemeSwitch}
+                    className="flex items-center gap-2 text-primary"
+                  >
+                    <Palette size={16} />
+                    <span className="font-medium">{currentTheme.name}</span>
+                    <span className="text-xs text-fg-muted">({currentTheme.era})</span>
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
