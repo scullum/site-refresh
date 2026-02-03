@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export function Work() {
   return (
-    <section id="work" className="min-h-screen px-8 py-32">
+    <section id="work" className="min-h-screen px-8 py-32 bg-bg">
       <div className="max-w-7xl mx-auto">
         <div className="mb-24">
           <motion.h2
@@ -15,7 +15,7 @@ export function Work() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-sm uppercase tracking-[0.2em] text-orange-600 mb-6 font-semibold"
+            className="text-sm uppercase tracking-[0.2em] text-primary mb-6 font-semibold"
           >
             {workPage.hero.title}
           </motion.h2>
@@ -24,7 +24,7 @@ export function Work() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="space-y-6 text-lg text-neutral-700 leading-relaxed max-w-prose"
+            className="space-y-6 text-lg text-fg-muted leading-relaxed max-w-prose"
           >
             {workPage.hero.intro.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
@@ -43,10 +43,10 @@ export function Work() {
             >
               <Link
                 href={`/work/${project.slug}`}
-                className="group border border-neutral-200 hover:border-neutral-900 transition-all bg-white overflow-hidden block h-full hover:shadow-xl"
+                className="group border border-border hover:border-border-strong transition-all bg-bg overflow-hidden block h-full hover:shadow-xl rounded-theme"
               >
                 {project.image && (
-                  <div className="aspect-[16/10] relative bg-neutral-100 overflow-hidden">
+                  <div className="aspect-[16/10] relative bg-bg-alt overflow-hidden">
                     <Image
                       src={project.image}
                       alt={project.name}
@@ -57,16 +57,16 @@ export function Work() {
                   </div>
                 )}
                 <div className="p-12">
-                  <p className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-3 font-semibold">
+                  <p className="text-sm uppercase tracking-[0.2em] text-fg-muted mb-3 font-semibold">
                     {project.company}
                   </p>
-                  <h3 className="text-2xl font-semibold tracking-tight mb-3 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-2xl font-semibold tracking-tight mb-3 group-hover:text-primary transition-colors">
                     {project.name}
                   </h3>
-                  <p className="text-neutral-700 leading-relaxed">
+                  <p className="text-fg-muted leading-relaxed">
                     {project.tagline}
                   </p>
-                  <span className="inline-block mt-6 text-sm uppercase tracking-wide font-medium border-b border-neutral-400 group-hover:border-neutral-900 transition-colors pb-1">
+                  <span className="inline-block mt-6 text-sm uppercase tracking-wide font-medium border-b border-fg-muted group-hover:border-fg transition-colors pb-1">
                     Read case study
                   </span>
                 </div>
@@ -85,7 +85,7 @@ export function Work() {
         >
           <Link
             href="/work"
-            className="inline-block text-sm uppercase tracking-wide font-medium border-b border-neutral-400 hover:border-neutral-900 transition-colors pb-1"
+            className="inline-block text-sm uppercase tracking-wide font-medium border-b border-fg-muted hover:border-fg transition-colors pb-1"
           >
             View work
           </Link>
@@ -94,4 +94,3 @@ export function Work() {
     </section>
   );
 }
-

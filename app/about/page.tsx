@@ -2,6 +2,7 @@ import { aboutPage } from '@/data/content';
 import { Navigation } from '@/app/components/Navigation';
 import { Footer } from '@/app/components/Footer';
 import { ExperienceTimeline } from '@/app/components/ExperienceTimeline';
+import { PageWrapper } from '@/app/components/PageWrapper';
 import Image from 'next/image';
 
 export const metadata = {
@@ -36,78 +37,80 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white text-neutral-900">
-      <Navigation />
-      <main className="pt-32 pb-24 px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-12 gap-16">
-            {/* Sidebar with label and photo */}
-            <div className="md:col-span-3">
-              <h1 className="text-sm uppercase tracking-[0.2em] text-orange-600 mb-12 font-semibold">
-                {aboutPage.hero.title}
-              </h1>
+    <PageWrapper>
+      <div className="min-h-screen bg-bg text-fg">
+        <Navigation />
+        <main className="pt-32 pb-24 px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-12 gap-16">
+              {/* Sidebar with label and photo */}
+              <div className="md:col-span-3">
+                <h1 className="text-sm uppercase tracking-[0.2em] text-primary mb-12 font-semibold">
+                  {aboutPage.hero.title}
+                </h1>
 
-              {/* Photo */}
-              <div className="sticky top-32">
-                <div className="aspect-square w-full bg-neutral-100 mb-6 relative overflow-hidden">
-                  <Image
-                    src="/images/scott-cullum.jpg"
-                    alt="Scott Cullum"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
-                    className="object-cover"
-                    priority
-                  />
+                {/* Photo */}
+                <div className="sticky top-32">
+                  <div className="aspect-square w-full bg-bg-alt mb-6 relative overflow-hidden">
+                    <Image
+                      src="/images/scott-cullum.jpg"
+                      alt="Scott Cullum"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 25vw"
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                  <p className="text-sm text-fg-muted leading-relaxed">
+                    I used to look like this 10 years ago
+                  </p>
                 </div>
-                <p className="text-sm text-neutral-500 leading-relaxed">
-                  I used to look like this 10 years ago
-                </p>
+              </div>
+
+              {/* Content */}
+              <div className="md:col-span-9 space-y-12">
+                {aboutPage.sections.map((section, sectionIndex) => (
+                  <div key={sectionIndex}>
+                    {section.heading && (
+                      <>
+                        <h2 className="text-2xl font-semibold tracking-tight mb-6">
+                          {section.heading}
+                        </h2>
+                        <div className="h-px bg-border mb-8"></div>
+                      </>
+                    )}
+                    <div className="space-y-6 text-lg text-fg-muted leading-relaxed max-w-prose">
+                      {section.body.map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+
               </div>
             </div>
+          </div>
 
-            {/* Content */}
-            <div className="md:col-span-9 space-y-12">
-              {aboutPage.sections.map((section, sectionIndex) => (
-                <div key={sectionIndex}>
-                  {section.heading && (
-                    <>
-                      <h2 className="text-2xl font-semibold tracking-tight mb-6">
-                        {section.heading}
-                      </h2>
-                      <div className="h-px bg-neutral-200 mb-8"></div>
-                    </>
-                  )}
-                  <div className="space-y-6 text-lg text-neutral-700 leading-relaxed max-w-prose">
-                    {section.body.map((paragraph, index) => (
-                      <p key={index}>{paragraph}</p>
-                    ))}
-                  </div>
-                </div>
-              ))}
+          {/* Experience Timeline */}
+          <div className="mt-16">
+            <ExperienceTimeline />
+          </div>
 
+          {/* CTA to Services */}
+          <div className="max-w-7xl mx-auto px-8 pt-16 pb-24">
+            <div className="border-t border-border pt-12">
+              <a
+                href="/services"
+                className="inline-block text-sm uppercase tracking-wide font-medium border-b border-fg-muted hover:border-fg transition-colors pb-1"
+              >
+                View services
+              </a>
             </div>
           </div>
-        </div>
+        </main>
 
-        {/* Experience Timeline */}
-        <div className="mt-16">
-          <ExperienceTimeline />
-        </div>
-
-        {/* CTA to Services */}
-        <div className="max-w-7xl mx-auto px-8 pt-16 pb-24">
-          <div className="border-t border-neutral-200 pt-12">
-            <a
-              href="/services"
-              className="inline-block text-sm uppercase tracking-wide font-medium border-b border-neutral-400 hover:border-neutral-900 transition-colors pb-1"
-            >
-              View services
-            </a>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </PageWrapper>
   );
 }
