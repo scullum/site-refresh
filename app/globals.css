@@ -20,7 +20,7 @@
 
 /* ═══════════════════════════════════
    TERMINAL (1980s)
-   IBM Plex Mono - technical, precise
+   Monospace, tight, technical
    ═══════════════════════════════════ */
 [data-theme="terminal"] {
   --color-primary: #00ff41;
@@ -39,11 +39,35 @@
 }
 [data-theme="terminal"] body {
   font-family: var(--font-mono), monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+[data-theme="terminal"] h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+[data-theme="terminal"] h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+[data-theme="terminal"] h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+[data-theme="terminal"] p {
+  max-width: 72ch;
 }
 
 /* ═══════════════════════════════════
    SWISS (1950s)
-   Inter - neutral, precise, clean
+   Precise, bold, grid-based
    ═══════════════════════════════════ */
 [data-theme="swiss"] {
   --color-primary: #ff0000;
@@ -62,16 +86,33 @@
 }
 [data-theme="swiss"] body {
   font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   letter-spacing: -0.01em;
 }
-[data-theme="swiss"] h1, [data-theme="swiss"] h2, [data-theme="swiss"] h3 {
+[data-theme="swiss"] h1 {
+  font-size: 4.5rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+[data-theme="swiss"] h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+[data-theme="swiss"] h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 /* ═══════════════════════════════════
    BRUTALIST (2010s)
-   Space Grotesk - raw, industrial
+   Raw, confrontational, unpolished
    ═══════════════════════════════════ */
 [data-theme="brutalist"] {
   --color-primary: #000000;
@@ -90,11 +131,28 @@
 }
 [data-theme="brutalist"] body {
   font-family: var(--font-grotesk), sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
 }
-[data-theme="brutalist"] h1, [data-theme="brutalist"] h2, [data-theme="brutalist"] h3 {
+[data-theme="brutalist"] h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 0.85;
+}
+[data-theme="brutalist"] h2 {
+  font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.02em;
+  line-height: 0.9;
+}
+[data-theme="brutalist"] h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 [data-theme="brutalist"] * {
   border-radius: 0 !important;
@@ -102,7 +160,7 @@
 
 /* ═══════════════════════════════════
    Y2K (2000s)
-   Nunito - soft, rounded, friendly
+   Soft, bubbly, optimistic
    ═══════════════════════════════════ */
 [data-theme="y2k"] {
   --color-primary: #0066ff;
@@ -121,14 +179,28 @@
 }
 [data-theme="y2k"] body {
   font-family: var(--font-nunito), sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
-[data-theme="y2k"] h1, [data-theme="y2k"] h2, [data-theme="y2k"] h3 {
+[data-theme="y2k"] h1 {
+  font-size: 3rem;
   font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+[data-theme="y2k"] h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+[data-theme="y2k"] h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 
 /* ═══════════════════════════════════
    ART DECO (1920s)
-   Josefin Sans - geometric, elegant
+   Elegant, geometric, luxurious
    ═══════════════════════════════════ */
 [data-theme="art-deco"] {
   --color-primary: #d4af37;
@@ -147,18 +219,34 @@
 }
 [data-theme="art-deco"] body {
   font-family: var(--font-josefin), sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
   letter-spacing: 0.02em;
 }
-[data-theme="art-deco"] h1, [data-theme="art-deco"] h2, [data-theme="art-deco"] h3 {
+[data-theme="art-deco"] h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+[data-theme="art-deco"] h2 {
+  font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+[data-theme="art-deco"] h3 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
 /* ═══════════════════════════════════
    VAPORWAVE (2010s)
-   Bebas Neue headings - tall, bold
-   Josefin body - clean contrast
+   Retro-futuristic, neon, dreamy
    ═══════════════════════════════════ */
 [data-theme="vaporwave"] {
   --color-primary: #ff71ce;
@@ -177,17 +265,35 @@
 }
 [data-theme="vaporwave"] body {
   font-family: var(--font-josefin), sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   letter-spacing: 0.01em;
 }
-[data-theme="vaporwave"] h1, [data-theme="vaporwave"] h2, [data-theme="vaporwave"] h3 {
+[data-theme="vaporwave"] h1 {
   font-family: var(--font-bebas), sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 0.9;
+}
+[data-theme="vaporwave"] h2 {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+[data-theme="vaporwave"] h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
 /* ═══════════════════════════════════
    MODERN MINIMAL (2020s)
-   Manrope - warm, contemporary
+   Clean, warm, balanced
    ═══════════════════════════════════ */
 [data-theme="minimal"] {
   --color-primary: #ea580c;
@@ -211,17 +317,36 @@
 @layer base {
   body {
     font-family: var(--font-manrope), sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
     background-color: var(--color-bg);
     color: var(--color-fg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color var(--transition-duration), color var(--transition-duration);
   }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
 }
 
 html {
   scroll-behavior: smooth;
-  font-size: 15px;
 }
 
 /* Effects */
