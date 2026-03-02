@@ -14,11 +14,7 @@ export function Navigation() {
   const [activeSection, setActiveSection] = useState<string>('');
 
   useEffect(() => {
-    // Use Intersection Observer to track visible sections
-    const observerOptions = {
-      rootMargin: '-20% 0px -80% 0px',
-      threshold: 0,
-    };
+    if (!isHomePage) return;
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -28,16 +24,13 @@ export function Navigation() {
             setActiveSection('#contact');
           } else if (id === 'work') {
             setActiveSection('#work');
-          } else if (id === 'home') {
-            setActiveSection('');
           } else {
             setActiveSection('');
           }
         }
       });
-    }, observerOptions);
+    }, { rootMargin: '-20% 0px -80% 0px', threshold: 0 });
 
-    // Observe sections
     const sections = ['home', 'work', 'contact'];
     sections.forEach((id) => {
       const element = document.getElementById(id);
@@ -45,25 +38,30 @@ export function Navigation() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [isHomePage]);
 
   useEffect(() => {
-    // Only animate on homepage
     if (!isHomePage) {
       setShowName(true);
       return;
     }
 
     const handleScroll = () => {
-      // Show name in nav when scrolled past 100px, then keep it visible
-      if (window.scrollY > 100 && !showName) {
+      if (window.scrollY > 100) {
         setShowName(true);
+        window.removeEventListener('scroll', handleScroll);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [showName, isHomePage]);
+  }, [isHomePage]);
+
+  const isLinkActive = (href: string) => {
+    if (activeSection === '#contact') return false;
+    if (href === '/work') return pathname === '/work' || pathname.startsWith('/work/');
+    return pathname === href;
+  };
 
   const handleLinkClick = () => {
     setMobileMenuOpen(false);
@@ -91,31 +89,17 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8 text-sm tracking-wide">
-            {nav.slice(1).map((link) => {
-              let isActive = pathname === link.href;
-
-              // Special handling for work link
-              if (link.href === '/work') {
-                isActive = pathname === '/work' || pathname.startsWith('/work/');
-              }
-
-              // Don't show page indicators when contact section is active
-              if (activeSection === '#contact') {
-                isActive = false;
-              }
-
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`hover:text-orange-600 transition-colors pb-1 ${
-                    isActive ? 'border-b-2 border-orange-600' : ''
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+            {nav.slice(1).map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`hover:text-orange-600 transition-colors pb-1 ${
+                  isLinkActive(link.href) ? 'border-b-2 border-orange-600' : ''
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
             <a
               href="#contact"
               className={`hover:text-orange-600 transition-colors pb-1 ${
@@ -142,32 +126,18 @@ export function Navigation() {
         <div className="md:hidden border-t border-neutral-200 bg-neutral-50">
           <div className="px-8 py-6">
             <div className="max-w-7xl mx-auto flex flex-col gap-4">
-              {nav.slice(1).map((link) => {
-                let isActive = pathname === link.href;
-
-                // Special handling for work link
-                if (link.href === '/work') {
-                  isActive = pathname === '/work' || pathname.startsWith('/work/');
-                }
-
-                // Don't show page indicators when contact section is active
-                if (activeSection === '#contact') {
-                  isActive = false;
-                }
-
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={handleLinkClick}
-                    className={`text-lg hover:text-orange-600 transition-colors pb-1 inline-block ${
-                      isActive ? 'border-b-2 border-orange-600' : ''
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              })}
+              {nav.slice(1).map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={handleLinkClick}
+                  className={`text-lg hover:text-orange-600 transition-colors pb-1 inline-block ${
+                    isLinkActive(link.href) ? 'border-b-2 border-orange-600' : ''
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
               <a
                 href="#contact"
                 onClick={handleLinkClick}

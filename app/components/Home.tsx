@@ -9,15 +9,15 @@ export function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Hide hero name when scrolled past 100px, then keep it hidden
-      if (window.scrollY > 100 && !hideHeroName) {
+      if (window.scrollY > 100) {
         setHideHeroName(true);
+        window.removeEventListener('scroll', handleScroll);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [hideHeroName]);
+  }, []);
 
   return (
     <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-orange-600 via-orange-500 to-orange-700 text-white px-8 pt-24 pb-32 animate-gradient bg-[length:200%_200%]">
