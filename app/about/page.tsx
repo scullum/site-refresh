@@ -59,9 +59,6 @@ export default function AboutPage() {
                     priority
                   />
                 </div>
-                <p className="text-sm text-neutral-500 leading-relaxed">
-                  I used to look like this 10 years ago
-                </p>
               </div>
             </div>
 
